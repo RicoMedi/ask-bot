@@ -83,10 +83,10 @@ const ChatPage = () => {
   };
   return (
     <div className=" flex flex-col h-screen bg-gray-100">
-      <header className="bg-white shadow px-4 py-4">
+      <header className="bg-white shadow px-4 py-4 text-center font-bold">
         <h1 className="text-2xl font semibold text-gray-800">
           {" "}
-          Chat with Llama
+        ASK-BOT
         </h1>
       </header>
 
