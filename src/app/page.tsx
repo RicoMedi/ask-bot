@@ -24,9 +24,9 @@ const ChatPage = () => {
     scrollToBottom();
   }, [messages]);
 
-  const clearMessages =()=>{
+  const clearMessages = () => {
     setMessages([]);
-  }
+  };
   // handleSubmit should also be inside the component
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -82,57 +82,72 @@ const ChatPage = () => {
     }
   };
   return (
-    <div className=" flex flex-col h-screen bg-gray-100">
-      <header className="bg-white shadow px-4 py-4 text-center font-bold">
-        <h1 className="text-2xl font semibold text-gray-800">
-          {" "}
-        ASK-BOT
-        </h1>
-      </header>
+    <div className="flex flex-col h-screen pb-10 bg-black">
+      <div className="w-full bg-white flex items-center px-4 py-4 justify-center border">
+        <header>
+          <h1 className="text-[2rem] font-bold text-black">ASK BOT</h1>
+        </header>
+      </div>
 
-      <div className="flex-1 overflow-y-auto p-4">
-        {messages.map((msg) => (
-          <div
-            key={msg.id}
-            className={`flex ${
-              msg.sender === "user" ? "justify-end" : "justify-start"
-            } mb-4`}
-          >
+      <div className="flex flex-col flex-grow bg-white p-4 m-10  rounded-2xl border-8 border-blue-700">
+        {/* Chat Messages Area */}
+        <div className="flex-grow overflow-y-auto p-4">
+          {messages.map((msg) => (
             <div
-              className={`rounded-lg px-4 py-2 max-w-xl ${
-                msg.sender === "user"
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-200 text-gray-800"
-              }`}
+              key={msg.id}
+              className={`flex ${
+                msg.sender === "user" ? "justify-end" : "justify-start"
+              } mb-4`}
             >
-              {msg.text}
+              <div
+                className={`rounded-lg px-4 py-2 max-w-xl ${
+                  msg.sender === "user"
+                    ? "bg-blue-500 text-white"
+                    : "bg-gray-200 text-gray-800"
+                }`}
+              >
+                {msg.text}
+              </div>
             </div>
-          </div>
-        ))}
-        {loading && (
-          <div className="flex justify-start mb-4">
-            <div className="flex space-x-1">
-              <span className="block w-2 h-2 bg-gray-400 rounded-full animate-pulse delay"></span>
-              <span className="block w-2 h-2 bg-gray-400 rounded-full animate-pulse delay-200"></span>
-              <span className="block w-2 h-2 bg-gray-400 rounded-full animate-pulse delay-400"></span>
+          ))}
+          {loading && (
+            <div className="flex justify-start mb-4">
+              <div className="flex space-x-1">
+                <span className="block w-2 h-2 bg-gray-400 rounded-full animate-pulse delay"></span>
+                <span className="block w-2 h-2 bg-gray-400 rounded-full animate-pulse delay-200"></span>
+                <span className="block w-2 h-2 bg-gray-400 rounded-full animate-pulse delay-400"></span>
+              </div>
             </div>
-          </div>
-        )}
-        <div ref={messageEndRef} />
-        <form onSubmit={handleSubmit} className="flex p-4 bg-white shadow">
+          )}
+          <div ref={messageEndRef} />
+        </div>
+
+        {/* Chat Form */}
+        <form
+          onSubmit={handleSubmit}
+          className="flex items-center justify-center p-4 pb-4 bg-white shadow mt-4 rounded-lg flex-shrink-0"
+        >
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Type a message..."
-            className="flex-1 border border-gray-300 rounded full px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500"
+            className="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-500"
             disabled={loading}
           />
           <button
             type="submit"
             className="ml-4 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 focus:outline-none disabled:bg-blue-300"
-            disabled={loading}> Submit </button> 
-            <button onClick={clearMessages} className="ml-4 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 focus:outline-none disabled:bg-blue-300"> Clear </button>
+            disabled={loading}
+          >
+            Submit
+          </button>
+          <button
+            onClick={clearMessages}
+            className="ml-4 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 focus:outline-none disabled:bg-blue-300"
+          >
+            Clear
+          </button>
         </form>
       </div>
     </div>

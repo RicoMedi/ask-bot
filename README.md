@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
-```bash
+````bash
 npm run dev
 # or
 yarn dev
@@ -33,7 +33,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+````
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -70,5 +70,3 @@ Make sure to restart the server after creating or updating the `.env` file to en
 ## Deployment
 
 To deploy your Ask-Bot, you can use platforms like Vercel for quick and seamless deployment. Follow the Next.js deployment documentation for detailed instructions.
-
-
