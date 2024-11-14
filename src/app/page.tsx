@@ -24,6 +24,9 @@ const ChatPage = () => {
     scrollToBottom();
   }, [messages]);
 
+  const clearMessages =()=>{
+    setMessages([]);
+  }
   // handleSubmit should also be inside the component
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -129,6 +132,7 @@ const ChatPage = () => {
             type="submit"
             className="ml-4 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 focus:outline-none disabled:bg-blue-300"
             disabled={loading}> Submit </button> 
+            <button onClick={clearMessages} className="ml-4 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 focus:outline-none disabled:bg-blue-300"> Clear </button>
         </form>
       </div>
     </div>
