@@ -14,7 +14,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-Sure! Here is a README for your project:
+Sure! Here is the fixed format for your README:
 
 ```md
 # Ask-Bot
@@ -57,24 +57,18 @@ You can start editing the page by modifying [`src/app/page.tsx`](src/app/page.ts
 - **Tailwind CSS**: Utilizes Tailwind CSS for styling.
 - **Custom Fonts**: Uses `next/font` to load custom fonts.
 
-## Learn More
+## Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Configure environment variables:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## License
-
-This project is licensed under the MIT License.
+```bash
+GROQCLOUD_API_KEY=your-api-key-here
 ```
 
-Feel free to customize this README further based on your specific project details and requirements.
+Make sure to restart the server after creating or updating the `.env` file to ensure the changes take effect.
 
-Similar code found with 1 license type
+## Deployment
+
+To deploy your Ask-Bot, you can use platforms like Vercel for quick and seamless deployment. Follow the Next.js deployment documentation for detailed instructions.
+
+
