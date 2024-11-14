@@ -83,13 +83,21 @@ const ChatPage = () => {
   };
   return (
     <div className="flex flex-col h-screen pb-10 bg-black">
-      <div className="w-full bg-white flex items-center px-4 py-4 justify-center border">
+      <div className="w-full flex items-center px-4 py-4 justify-center border-4">
         <header>
-          <h1 className="text-[2rem] font-bold text-black">ASK BOT</h1>
+          <h1 className="text-[2rem] font-bold text-white">ASK BOT</h1>
         </header>
       </div>
 
-      <div className="flex flex-col flex-grow bg-white p-4 m-10  rounded-2xl border-8 border-blue-700">
+      <div
+        className="flex flex-col flex-grow m-12 rounded-2xl border-8 border-white-700"
+        style={{
+          backgroundImage: "url('/images/background.jpg')",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat", // Prevents the image from repeating
+          backgroundPosition: "center",
+        }}
+      >
         {/* Chat Messages Area */}
         <div className="flex-grow overflow-y-auto p-4">
           {messages.map((msg) => (
