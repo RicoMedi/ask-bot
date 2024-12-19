@@ -14,7 +14,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-Sure! Here is the fixed format for your README:
+
 
 ```md
 # Ask-Bot
