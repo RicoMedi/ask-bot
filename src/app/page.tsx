@@ -82,7 +82,7 @@ const ChatPage = () => {
     }
   };
   return (
-    <div className="flex flex-col h-screen pb-10 bg-white">
+    <div className="flex flex-col w-full h-screen pb-10 bg-white">
       <div className="w-full flex items-center px-4 py-6 justify-center ">
         <header>
           <h1 className="text-[3rem] font-extrabold text-black">ASK BOT</h1>
