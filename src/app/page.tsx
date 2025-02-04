@@ -152,7 +152,7 @@ const ChatPage = () => {
           </button>
           <button
             onClick={clearMessages}
-            className="ml-4 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 focus:outline-none disabled:bg-blue-300"
+            className="ml-4 bg-white text-black p-2 rounded-full hover:bg-blue-600 focus:outline-none disabled:bg-blue-300"
           >
             Clear
           </button>
