@@ -110,7 +110,7 @@ const ChatPage = () => {
               <div
                 className={`rounded-lg px-4 py-2 max-w-xl ${
                   msg.sender === "user"
-                    ? "bg-gray-200 text-white"
+                    ? "bg-blue-500 text-white"
                     : "bg-gray-200 text-gray-800"
                 }`}
               >
@@ -152,7 +152,7 @@ const ChatPage = () => {
           </button>
           <button
             onClick={clearMessages}
-            className="ml-4 bg-white text-black p-2 rounded-full hover:bg-blue-600 focus:outline-none disabled:bg-blue-300"
+            className="ml-4 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 focus:outline-none disabled:bg-blue-300"
           >
             Clear
           </button>
