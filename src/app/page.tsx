@@ -110,7 +110,7 @@ const ChatPage = () => {
               <div
                 className={`rounded-lg px-4 py-2 max-w-xl ${
                   msg.sender === "user"
-                    ? "bg-blue-500 text-white"
+                    ? "bg-gray-200 text-white"
                     : "bg-gray-200 text-gray-800"
                 }`}
               >
